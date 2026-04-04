@@ -52,11 +52,11 @@
         }
       }
       @page {
-        size: 11in 17in;
-        margin: 0.25in;
+        size: tabloid;
+        margin: 0;
       }
       @page :first {
-        size: 11in 17in;
+        size: tabloid;
       }
       @media print {
         .page-container {
@@ -107,13 +107,13 @@
             harbor operations. Cooperative manipulation utilizes swarms of
             autonomous robotic agents to replace large, crewed tugboats,
             creating a redundant, precise, and environmentally sustainable
-            gateway for the modern Smart Port City.
+            gateway for the modern Smart Ports.
           </p>
         </header>
 
-        <section class="bg-white rounded-lg shadow-lg p-3 overflow-hidden">
+        <section class="blueprint-bg rounded-lg shadow-lg p-3 overflow-hidden">
           <div
-            class="blueprint-bg p-3 md:p-4 relative flex flex-col items-center justify-center min-h-[200px]"
+            class="p-3 md:p-4 relative flex flex-col items-center justify-center min-h-[200px]"
           >
             <div class="absolute top-1 left-3 text-white/50 font-mono text-xs">
               SWARM MANEUVERING
@@ -126,43 +126,58 @@
                 alt="Model Predictive Control Diagram"
                 class="w-4/5 md:w-3/5 rounded-lg border border-white/20 shadow-lg"
               />
-              <div
-                class="bg-white/10 backdrop-blur-md border border-white/20 p-3 rounded-lg max-w-md w-full md:w-2/5 shadow-lg"
-              >
-                <h3
-                  class="text-white text-sm font-bold mb-1 uppercase tracking-wide"
+              <div class="flex flex-col space-y-3 w-full md:w-2/5">
+                <div
+                  class="bg-white/10 backdrop-blur-md border border-white/20 p-3 rounded-lg shadow-lg"
                 >
-                  The Centralized Swarm
-                </h3>
-                <p class="text-slate-300 text-xs">
-                  A decentralized swarm utilizes Model Predictive Control to
-                  manage the predicted path of the ship. Thrust is allocated
-                  locally across the agents, eliminating any single point of
-                  failure (Nesi et al., 2019).
-                </p>
+                  <h3
+                    class="text-white text-sm font-bold mb-1 uppercase tracking-wide"
+                  >
+                    The Centralized Swarm
+                  </h3>
+                  <p class="text-slate-300 text-xs">
+                    A decentralized swarm utilizes Model Predictive Control to
+                    manage the predicted path of the ship. Thrust is allocated
+                    locally across the agents, eliminating any single point of
+                    failure (Nesi et al., 2019).
+                  </p>
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-md border border-white/20 p-3 rounded-lg shadow-lg"
+                >
+                  <h3
+                    class="text-white text-sm font-bold mb-1 uppercase tracking-wide"
+                  >
+                    MPC-Based Control
+                  </h3>
+                  <p class="text-slate-300 text-xs">
+                    Model Predictive Control (MPC) allows the swarm to optimize
+                    maneuvers in real-time, accounting for dynamic environmental
+                    conditions and vessel responses, ensuring precise and adaptive
+                    control throughout the docking process.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           <div
-            class="rounded-2xl shadow-lg p-8 border-l-8 border-[#BDC3C7] relative overflow-hidden "
-            style="background-image: url('trad_dark.png'); background-size: cover; background-position: center;"
+            class="rounded-2xl shadow-lg p-8 border-l-8 border-[#BDC3C7] relative overflow-hidden"
+            style="background-image: linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.88)), url('trad_dark.png'); background-size: cover; background-position: center; background-blend-mode: lighten;"
           >
-            <!-- <div class="absolute inset-0 bg-white/75 rounded-2xl"></div> -->
             <div class="relative z-10"
             
             >
             <h3
-              class="text-xl font-bold text-green-300 uppercase tracking-wider mb-4"
-              
+              class="text-xl font-bold text-slate-900 uppercase tracking-wider mb-4"
+              style="text-shadow: 0 0 6px rgba(255,255,255,0.95);"
             >
               Traditional Harbor Operations
             </h3>
-            <ul class="space-y-4 bg-black/35" >
+            <ul class="space-y-4 bg-white/80" >
               <li class="flex items-start">
                 <span class="text-red-400 mr-2">&#10006;</span>
-                <span class="text-sm text-white"
+                <span class="text-sm text-slate-900"
                   ><strong>Human Factor:</strong> Susceptible to cognitive
                   failure, fatigue, and communication breakdowns during complex
                   docking.</span
@@ -170,14 +185,14 @@
               </li>
               <li class="flex items-start">
                 <span class="text-red-400 mr-2">&#10006;</span>
-                <span class="text-sm text-white"
+                <span class="text-sm text-slate-900"
                   ><strong>Asset Stress:</strong> Inconsistent force application
                   leads to hull stress and fender damage.</span
                 >
               </li>
               <li class="flex items-start">
                 <span class="text-red-400 mr-2">&#10006;</span>
-                <span class="text-sm text-white"
+                <span class="text-sm text-slate-900"
                   ><strong>Environmental Impact:</strong> High-velocity
                   prop-wash from massive diesel engines causes seabed
                   scouring.</span
@@ -187,18 +202,19 @@
             </div>
           </div>
           <div
-            class="bg-[#001f3f] rounded-2xl shadow-lg p-8 border-l-8 border-[#5ECC71] text-white "
-            style="background-image: url('future_dark.png'); background-size: cover; background-position: center;""
+            class="rounded-2xl shadow-lg p-8 border-l-8 border-[#5ECC71] text-slate-900"
+            style="background-image: linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.8)), url('future_dark.png'); background-size: cover; background-position: center; background-blend-mode: lighten;"
           >
             <h3
-              class="text-xl font-bold text-[#23311] uppercase tracking-wider mb-4"
+              class="text-xl font-bold text-slate-900 uppercase tracking-wider mb-4"
+              style="text-shadow: 0 0 6px rgba(255,255,255,0.95);"
             >
               Autonomous Swarm Advantage
             </h3>
-            <ul class="space-y-4 bg-black/35" >
+            <ul class="space-y-4 bg-white/80" >
               <li class="flex items-start ">
                 <span class="text-[#2ECC71] mr-2">&#10004;</span>
-                <span class="text-sm text-white"
+                <span class="text-sm text-slate-900"
                   ><strong>Precision Control:</strong> Standardized, algorithmic
                   maneuvers eliminate human cognitive failure (Lexau et al.,
                   2023).</span
@@ -206,7 +222,7 @@
               </li>
               <li class="flex items-start">
                 <span class="text-[#2ECC71] mr-2">&#10004;</span>
-                <span class="text-sm text-white"
+                <span class="text-sm text-slate-900"
                   ><strong>Distributed Force:</strong> Balanced thrust
                   allocation extends hull life and protects infrastructure (Choi
                   et al., 2023).</span
@@ -214,7 +230,7 @@
               </li>
               <li class="flex items-start">
                 <span class="text-[#2ECC71] mr-2">&#10004;</span>
-                <span class="text-sm text-white"
+                <span class="text-sm text-slate-900"
                   ><strong>Sustainability:</strong> Electric-powered swarms
                   reduce carbon footprint and underwater noise pollution.</span
                 >
@@ -227,9 +243,9 @@
           <h2 class="text-sm md:text-base text-center font-bold text-[#001f3f] uppercase tracking-wide mb-3 px-1">
             Three Pillars of Autonomous Harbor Operations
           </h2>
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 p-4 bg-slate-50/90 rounded-3xl border border-slate-200 shadow-sm">
           <section
-            class="bg-white rounded-lg shadow-lg p-4 flex flex-col border-t-4 border-[#001f3f]"
+            class="bg-white/95 rounded-lg shadow-2xl p-4 flex flex-col border border-slate-200 border-t-4 border-t-[#001f3f]"
           >
 
             <h3 class="text-lg font-bold text-[#001f3f] mb-2">
@@ -244,14 +260,11 @@
             <div class="chart-container">
               <canvas id="resilienceChart"></canvas>
             </div>
-            <p class="text-xs text-slate-500 mt-4 font-mono">
-              Data model reflecting thrust reallocation benefits (Du et al.,
-              2021).
-            </p>
+
           </section>
 
           <section
-            class="bg-white rounded-lg shadow-lg p-4 flex flex-col border-t-4 border-[#2ECC71]"
+            class="bg-white/95 rounded-lg shadow-2xl p-4 flex flex-col border border-slate-200 border-t-4 border-t-[#2ECC71]"
           >
 
             <h3 class="text-lg font-bold text-[#001f3f] mb-2">
@@ -267,35 +280,28 @@
             <div class="chart-container">
               <canvas id="safetyChart"></canvas>
             </div>
-            <p class="text-xs text-slate-500 mt-4 font-mono">
-              Collision factors in restricted waters (TSB Canada, 1995).
-            </p>
+       
           </section>
 
           <section
-            class="bg-white rounded-lg shadow-lg p-4 flex flex-col border-t-4 border-[#BDC3C7]"
+            class="bg-white/95 rounded-lg shadow-2xl p-4 flex flex-col border border-slate-200 border-t-4 border-t-[#BDC3C7]"
           >
 
             <h3 class="text-lg font-bold text-[#001f3f] mb-2">
               Pillar 3: The Scalable Smart Port
             </h3>
-            <p class="text-slate-600 mb-3 text-xs flex-grow">
-             Swarms execute maneuvers with precision algorithms, reducing down-time
-              waiting for crews. This allows for 24/7 port utilization,
-              maximizing existing infrastructure without the extreme
-              environmental costs of harbor dredging.
+            <p class="text-slate-600 mb-3 text-xs">
+             Swarms reduce down-time allowing for increased port utilization,
+              maximizing existing infrastructure.
             </p>
-            <div class="chart-container">
+            <div class="chart-container" style="flex-grow: 1; height: auto;">
               <canvas id="throughputChart"></canvas>
             </div>
-            <p class="text-xs text-slate-500 mt-4 font-mono">
-              Projected capacity edge without expansion (Lambert et al., 2019).
-            </p>
           </section>
         </div>
 
         <section
-          class="bg-[#001f3f] rounded-lg shadow-lg p-4 md:p-6 text-white"
+          class="bg-[#001f3f] rounded-lg shadow-lg p-4 md:p-6 text-white mt-4"
         >
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <div>
@@ -440,6 +446,46 @@ Repository.
         },
       };
 
+      const valueLabelPlugin = {
+        id: "valueLabelPlugin",
+        afterDatasetsDraw(chart) {
+          if (chart.canvas.id === "optimizationChart") return;
+          const { ctx } = chart;
+          ctx.save();
+          ctx.font = "600 11px Inter, system-ui, sans-serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          chart.data.datasets.forEach((dataset, datasetIndex) => {
+            const meta = chart.getDatasetMeta(datasetIndex);
+            if (!meta?.data) return;
+            meta.data.forEach((element, index) => {
+              const value = dataset.data[index];
+              if (value === null || value === undefined) return;
+              const position = element.tooltipPosition();
+              ctx.fillStyle = "#ffffff";
+              ctx.strokeStyle = "rgba(0, 0, 0, 0.7)";
+              ctx.lineWidth = 3;
+              if (chart.config.type === "doughnut") {
+                const midAngle = (element.startAngle + element.endAngle) / 2;
+                const radius = (element.outerRadius + element.innerRadius) / 2;
+                const x = element.x + Math.cos(midAngle) * radius;
+                const y = element.y + Math.sin(midAngle) * radius;
+                ctx.strokeText(value, x, y);
+                ctx.fillText(value, x, y);
+              } else {
+                const x = position.x;
+                const y = position.y - 10;
+                ctx.strokeText(value, x, y);
+                ctx.fillText(value, x, y);
+              }
+            });
+          });
+          ctx.restore();
+        },
+      };
+
+      Chart.register(valueLabelPlugin);
+
       const resLabels = ["Traditional Single Tug", "Decentralized Swarm"].map(
         wrapLabel,
       );
@@ -461,10 +507,22 @@ Repository.
           maintainAspectRatio: false,
           plugins: {
             legend: { display: false },
+            title: {
+              display: true,
+              text: "Risk of Maneuver Failure (%)",
+              color: "#001f3f",
+              font: { size: 12, weight: "600" },
+              padding: { top: 6, bottom: 10 },
+            },
             tooltip: { callbacks: commonTooltipConfig },
           },
           scales: {
-            y: { beginAtZero: true, max: 100, grid: { color: "#f1f5f9" } },
+            y: {
+              beginAtZero: true,
+              max: 100,
+              grid: { color: "#f1f5f9" },
+              ticks: { display: false },
+            },
             x: { grid: { display: false } },
           },
         },
@@ -509,29 +567,25 @@ Repository.
         },
       });
 
-      const thruLabels = ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5"].map(
+      const thruLabels = ["Scheduling", "Maneuvering Path", "Final Positioning"].map(
         wrapLabel,
       );
       new Chart(document.getElementById("throughputChart"), {
-        type: "line",
+        type: "bar",
         data: {
           labels: thruLabels,
           datasets: [
             {
-              label: "Traditional Crewed Operations",
-              data: [100, 105, 108, 110, 112],
-              borderColor: "#BDC3C7",
-              backgroundColor: "rgba(189, 195, 199, 0.2)",
-              fill: true,
-              tension: 0.4,
+              label: "Traditional",
+              data: [10, 15, 8],
+              backgroundColor: "#BDC3C7",
+              borderRadius: 4,
             },
             {
-              label: "Autonomous Swarm Integration",
-              data: [100, 120, 145, 175, 210],
-              borderColor: "#2ECC71",
-              backgroundColor: "rgba(46, 204, 113, 0.2)",
-              fill: true,
-              tension: 0.4,
+              label: "Autonomous Swarm",
+              data: [2, 11, 5],
+              backgroundColor: "#2ECC71",
+              borderRadius: 4,
             },
           ],
         },
@@ -543,11 +597,27 @@ Repository.
               position: "bottom",
               labels: { boxWidth: 12, font: { size: 10 } },
             },
+            title: {
+              display: true,
+              text: "Impact of Automation on Time Efficiency",
+              color: "#001f3f",
+              font: { size: 12, weight: "600" },
+              padding: { top: 6, bottom: 10 },
+            },
             tooltip: { callbacks: commonTooltipConfig },
           },
           scales: {
-            y: { beginAtZero: false, grid: { color: "#f1f5f9" } },
-            x: { grid: { display: false } },
+            y: {
+              beginAtZero: true,
+              grid: { color: "#f1f5f9" },
+              title: { display: true, text: "Time To Complete (Relative Units)", color: "#334155", font: { size: 11, weight: "500" } },
+              ticks: { display: false },
+            },
+            x: {
+              grid: { display: false },
+              // title: { display: true, text: "Wait  ", color: "#334155", font: { size: 11, weight: "500" } },
+              ticks: { display: true, color: "#334155", font: { size: 10 } },
+            },
           },
         },
       });
